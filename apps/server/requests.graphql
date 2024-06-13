@@ -1,0 +1,39 @@
+query {
+  users {
+    id
+    name
+  }
+}
+
+query {
+  users(id: "6668fe166643b7e81eff4157") {
+    id
+    name
+  }
+}
+
+mutation createUser {
+  createUser(name: "Mallone") {
+    name
+  }
+}
+
+mutation createUser($name: String) {
+  createUser(name: $name) {
+    name
+  }
+}
+
+mutation {
+  updateUser(id: "666902e74af917a09eaf8ddf", name: "Mallone 2") {
+    id
+    name
+  }
+}
+
+mutation {
+  deleteUser(id: "6668fe166643b7e81eff4157") {
+    id
+    name
+  }
+}
